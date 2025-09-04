@@ -1,1 +1,88 @@
+ 
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
 
+.people {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 30px 30px ;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 24px;
+  
+
+  &__photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    overflow: hidden;
+    margin-top: 30px;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &__rank {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 50%;
+  right: 10px;
+  background: #fff;
+  color: #8B0000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  border: 2px solid #eee;
+  }
+
+  &__name {
+    font-size: 20px;
+    color: #2F4F4F;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0%;
+    margin-bottom: 0;
+  }
+ 
+}
+
+
+@media (min-width: 750px){
+  .people{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px){
+  .people{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px){
+  .people{
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
